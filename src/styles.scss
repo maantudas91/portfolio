@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+// Override Boostrap variables
+@import "./scss/bootstrap-variables";
+
+// Import Bootstrap source files
+@import "node_modules/bootstrap/scss/bootstrap";
+
+
+// Custom styles
+@import "./scss/custom";
