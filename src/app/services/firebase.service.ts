@@ -15,13 +15,14 @@ export class FirebaseService {
         .snapshotChanges()
         .subscribe(
           data => {
-            let education = data.map(e => {
-              return {
-                id: e.payload.doc.id,
-                ...e.payload.doc.data()
-              };
-            });
-            obs.next(education);
+            obs.next(
+              data.map(e => {
+                return {
+                  id: e.payload.doc.id,
+                  ...e.payload.doc.data()
+                };
+              })
+            );
           },
           err => {
             obs.error(err);
