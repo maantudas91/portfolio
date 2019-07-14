@@ -18,3 +18,7 @@ $theme-colors: (
   dark:  $black
 );
 
+@font-face{
+  font-family: 'Catamaran', sans-serif !important;
+  src: url('https://fonts.googleapis.com/css?family=Catamaran&display=swap');
+}

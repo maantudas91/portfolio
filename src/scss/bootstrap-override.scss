@@ -1,0 +1,42 @@
+@import "variables";
+
+
+// Card layout
+.card{
+  margin-bottom: 2 * $spacer;
+
+  // Cards with color accent
+  @each $color, $value in $theme-colors {
+    &.bg-#{$color} {
+      border-color: darken($value, 12.5%);
+      .card-header {
+        background-color: darken($value, 3%);
+        border-color: darken($value, 12.5%);
+      }
+    }
+  }
+
+  .card-header{
+    padding: 0.7rem 1rem;
+    
+    h3{ 
+      font-size: 1.2rem;
+    }
+
+    .card-title{
+      margin-bottom: 0rem;
+    }
+  }
+}
+
+.card-body {
+    background: #fff !important;
+    display: flex; 
+    flex-wrap: wrap;
+    flex-direction: row;
+    
+    .center{
+      
+    }
+}
+// End card layout

@@ -7,6 +7,7 @@
 // Import Bootstrap source files
 @import "node_modules/bootstrap/scss/bootstrap";
 
+@import "./scss/bootstrap-override.scss";
 
 // Custom styles
 @import "./scss/custom";

@@ -1,3 +1,7 @@
+body{
+    font-family: 'Catamaran', sans-serif;
+}
+
 #topbar{
     background: #fff;
     padding: 10px 0;
@@ -102,4 +106,39 @@ i.fa{
 a.no-anchor{
     text-decoration: none !important;
     color: theme-color('dark');
+}
+
+.card-body{
+    justify-content: flex-start;
+    & .center{
+        width: 25%;
+        height: auto;
+    }
+}
+
+.main-content{
+    margin-top: 2rem;
+}
+
+.quote{
+    text-align: center;
+}
+blockquote{
+    font-style: italic;
+    font-size: 1.25rem;
+}
+blockquote::after{
+    content: "\0022";
+}
+blockquote::before{
+    content: "\0022";
+}
+a.link-icon::before{
+    content: "\f0c1";
+    //font-family: 'FontAwesome';
+    font-family: 'Font Awesome\ 5 Free';
+    font-weight: 600;
+    margin-right: 0.25rem;
+    color: theme-color("primary");
+    font-size: 0.85rem;
 }

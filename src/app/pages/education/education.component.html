@@ -1,3 +1,24 @@
-<p>
-  education works!
-</p>
+<div class="quote">
+  <blockquote>
+    Where the mind is without fear and the head is held high, where knowledge is
+    free.
+  </blockquote>
+</div>
+<ng-container *ngIf="educationData.length > 0">
+  <div class="row" *ngFor="let education of educationData">
+    <div class="col-md-3">
+      <h4>{{ education.name }}</h4>
+      <span>{{ getDate(education) }}</span>
+    </div>
+    <div class="col-md-9">
+      <p>{{ education.content }}</p>
+      <a
+        [href]="education.addressLink"
+        class="link-icon"
+        target="_blank"
+        [title]="education.addressLink"
+        >{{ education.addressLink }}</a
+      >
+    </div>
+  </div>
+</ng-container>
