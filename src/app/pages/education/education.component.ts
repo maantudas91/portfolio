@@ -17,7 +17,6 @@ export class EducationComponent implements OnInit {
   ngOnInit() {
     this.firebaseService.getEducationData().subscribe(
       data => {
-        console.log(data);
         this.educationData = data;
       },
       err => {
